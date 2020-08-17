@@ -21,7 +21,8 @@ const App = () => {
     }
     if (lastInput === "=") {
       setInputString(num);
-    } else {
+    } 
+    else {
       setInputString(inputString + num);
     }
     //setInputCurrent
@@ -102,10 +103,9 @@ const App = () => {
     let dec = e.target.value;
 
     //setInputCurrent
-    if (inputCurrent.includes(".") && lastInput !== "=") {
+    if (lastInput === "=" || inputCurrent.includes(".")) {
       return;
-    }
-    if (
+    } if (
       inputCurrent === "+" ||
       inputCurrent === "/" ||
       inputCurrent === "*" ||

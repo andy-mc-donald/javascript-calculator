@@ -1,9 +1,10 @@
-body{
+body {
   margin: 0;
-  background-color: #EACDC2;
+  background-color: #eacdc2;
+  overflow: auto;
 }
 
-#container{
+#container {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -11,8 +12,7 @@ body{
   justify-content: center;
 }
 
-#calculator{
-  border: 1px solid green;
+#calculator {
   width: 400px;
   height: auto;
   padding: 40px;
@@ -20,28 +20,28 @@ body{
   border-radius: 10px;
 }
 
-#display-container{
+#display-container {
   white-space: pre-wrap;
   word-wrap: break-word;
   text-align: right;
   padding: 10px;
   min-height: 140px;
   vertical-align: text-top;
-  font-family: 'VT323', monospace;
-  color: #FFF8F0;
-  background-color: #02020B;
+  font-family: "VT323", monospace;
+  color: #fff8f0;
+  background-color: #02020b;
   border-radius: 10px;
 }
 
 #display-upper-line {
-  font-size: 20px;  
+  font-size: 20px;
 }
 
-#display{
+#display {
   font-size: 30px;
 }
 
-#buttons-container{
+#buttons-container {
   height: 480px;
   padding-top: 15px;
   display: grid;
@@ -50,33 +50,96 @@ body{
 }
 
 input {
-  font-family: 'Staatliches', cursive;
+  font-family: "Staatliches", cursive;
   font-size: 22px;
   margin: 5px;
-  color: #FFF8F0;
-  background-color: #45464A;
+  color: #fff8f0;
+  background-color: #45464a;
 }
 
-#equals{
-  background-color: #DB9D47;
-  color: #FFF8F0;
+input:hover {
+  background-color: #28282a;
 }
 
-#clear{
+input:active {
+  background-color: #eacdc2;
+}
+
+#equals {
+  background-color: #db9d47;
+  color: #fff8f0;
+}
+
+#equals:hover {
+  background-color: #aa7122;
+}
+
+#equals:active {
+  background-color: #eacdc2;
+}
+
+#clear {
   grid-column: 1 / 4;
-  background-color: #92140C;
-  color: #FFF8F0;
+  background-color: #92140c;
+  color: #fff8f0;
+}
+
+#clear:hover {
+  background-color: #4b0b06;
+}
+
+#clear:active {
+  background-color: #eacdc2;
 }
 
 #add {
   grid-column: 4 / 5;
   grid-row: 4 / 6;
-  background-color: #3423A6;
-  color: #FFF8F0;
+  background-color: #3423a6;
+  color: #fff8f0;
 }
 
-#divide, #multiply, #subtract {
-  background-color: #3423A6;
-  color: #FFF8F0;
+#divide,
+#multiply,
+#subtract {
+  background-color: #3423a6;
+  color: #fff8f0;
 }
 
+#add:hover,
+#divide:hover,
+#multiply:hover,
+#subtract:hover {
+  background-color: #201565;
+}
+
+#add:active,
+#divide:active,
+#multiply:active,
+#subtract:active {
+  background-color: #eacdc2;
+}
+
+@media (width < 768px) {
+  #calculator {
+    width: 250px;
+    padding: 20px;
+  }
+  #display-container {
+    min-height: 100px;
+  }
+
+  #display-upper-line {
+    font-size: 18px;
+  }
+
+  #display {
+    font-size: 25px;
+  }
+  #buttons-container {
+    height: 300px;
+  }
+  input {
+    font-size: 18px;
+  }
+}

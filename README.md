@@ -1,4 +1,4 @@
-# JavaScript Calculator
+# [JavaScript Calculator](https://andy-mc-donald.github.io/javascript-calculator/)
 
 ![JavaScript Calculator screenshot](javascript-calculator.png)
 
